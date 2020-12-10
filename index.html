@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Virtual Tour</title>
+        <meta name="author" content="Maxwell Jiang">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="slidestyle.css">
+    </head>
+
+    <!--Maps, hidden until buttons are clicked-->
+    <div id="popup-screen">
+        <div id = "popup-container">
+            <div id="1stfloor-container" class = "map-container" data-parent="chestnut">
+                <embed src="floorplans/1stfloor.svg" class="floorplan" id="1stfloor-id">
+            </div>
+            <div id="lowerlevel-container" class = "map-container" data-parent="chestnut">
+                <embed src="floorplans/lowerlevel.svg" class="floorplan" id="lowerlevel-id">
+            </div>
+            <div id="woodland-container" class = "map-container" data-parent="woodland">
+                <embed src="floorplans/woodland.svg" class="floorplan" id="woodland-id">
+            </div>
+        </div>
+        <div id="info-box">
+            <img id="info-box-img">
+            <h3 id="info-box-header"></h3>
+            <div id="info-box-text"></div>
+        </div>
+    </div>
+    <!--Slideshow-->
+    <div id="virtual-tour">
+        <div class="slideshow" id="chestnut">
+            <div class = "map-btn" data-title = "chestnut">Click to open floor plan</div>
+            <div class="title">
+                <b>56 Chestnut St.</b><br>
+                <span style="font-size: 1.5vw; position: absolute; top: 90%;">Waltham, MA</span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 'chestnut')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'chestnut')">&#10095;</a>
+        </div>
+        <div id="chestnut-bar" style="text-align:center; margin-bottom: 20px;">
+        </div>
+    
+        <div class="slideshow" id="woodland">
+            <div class = "map-btn" data-title = "woodland">Click to open floor plan</div>
+            <div class="title">
+                <b>31 Woodland Rd.</b><br>
+                <span style="font-size: 1.5vw; position: absolute; top: 90%;">Waltham, MA</span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 'woodland')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'woodland')">&#10095;</a>
+        </div>
+        <div id = "woodland-bar" style="text-align:center;">
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="slideshow.js"></script>
+</html>

@@ -1,0 +1,143 @@
+.map-btn{
+    top: 90%;
+    left: 67%;
+    font-size: 1.2vw;
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+    font-family: 'Playfair Display', serif;
+    color: white;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid; 
+    border-color: rgb(226, 226, 226);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.map-btn:hover{
+    transform: scale(1.1);
+}
+
+#popup-screen{
+    z-index: 5;
+    position: fixed; 
+    display: none;
+    /*overflow: scroll;
+    /*center the map container once flex display is enabled*/
+    justify-content: center;
+    align-items: center;
+
+    /*The modal object covers the page behind it*/
+    left: 0; 
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /*cover background with half opacity*/
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popup-container{
+    /*need this for the animation*/
+    position: relative;
+    width: 70vw;
+    
+    /*height: 70vh;*/
+
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px 8px rgba(0,0,0,0.4);
+    
+    /*animation*/
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.map-container{
+    position: relative;
+    display: none;
+    /*SVG floorplans are 2:1 ratio*/
+    width: 100%;
+    height: calc(var(--width)/2);
+}
+
+.floorplan{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.room-btn{
+    cursor: pointer;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 8px solid rgb(35, 100, 138);
+}
+
+#info-box{
+    top: -100%;
+    left: -100%;
+    background-color: white;
+    box-shadow: 0px 0px 7px 5px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    max-width: 25vw;
+    padding: 1%;
+
+    position: absolute;
+}
+#info-box-header{
+    font-size: 1.6vw;
+    font-family: Arial;
+}
+#info-box-img{
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+#info-box-text{
+    max-width: 100%;
+    height: auto;
+    font-size: 1.2vw;
+    font-family: Arial;
+}
+
+#map-toggler-right{
+    display: none;
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid rgb(168, 213, 255);
+    right: 10%;
+}
+#map-toggler-right:hover{
+    transform: scale(1.3);
+}
+#map-toggler-left{
+    display: none;
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent; 
+    border-right: 40px solid rgb(168, 213, 255);
+    left: 10%;
+}
+#map-toggler-left:hover{
+    transform: scale(1.3);
+}
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
