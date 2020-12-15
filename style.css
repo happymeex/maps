@@ -1,5 +1,5 @@
 .map-btn{
-    top: 90%;
+    top: 85%;
     left: 67%;
     font-size: 1.2vw;
     z-index: 2;
@@ -8,8 +8,8 @@
     backdrop-filter: blur(2px);
     font-family: 'Playfair Display', serif;
     color: white;
-    padding: 5px;
-    border-width: 1px;
+    padding: 0.5vw;
+    border-width: 0.05vw;
     border-style: solid; 
     border-color: rgb(226, 226, 226);
     border-radius: 3px;
@@ -92,7 +92,7 @@
 }
 #info-box-header{
     font-size: 1.6vw;
-    font-family: Arial;
+    font-family: Georgia;
 }
 #info-box-img{
     width: 100%;
@@ -104,7 +104,7 @@
     max-width: 100%;
     height: auto;
     font-size: 1.2vw;
-    font-family: Arial;
+    font-family: Georgia;
 }
 
 #map-toggler-right{
